@@ -1,5 +1,3 @@
-import java.io.IOException;
-
 public class Konto {
     int kontonummer;//номер счета
     double saldo;//остаток средств
