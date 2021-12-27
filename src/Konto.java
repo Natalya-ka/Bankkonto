@@ -40,7 +40,7 @@ public class Konto {
         if(betrag<0)
             throw new KontoAusnahme("Negativer Betrag:"+betrag);
         if(saldo<betrag)
-            throw new KontoAusnahme("Betrag mehr als Saldo:"+betrag);
+            throw new KontoAusnahme("Betrag mehr als Saldo:"+saldo);
         saldo -= betrag;
     }
     public void info() {
