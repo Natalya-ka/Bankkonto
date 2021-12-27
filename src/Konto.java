@@ -32,10 +32,17 @@ public class Konto {
 
             saldo = betrag;
     }
-    public void zahleEin(double betrag) {
+    public void zahleEin(double betrag)throws KontoAusnahme {
+        if(betrag<0)
+            throw new KontoAusnahme("Negativer Betrag:"+betrad);
+
         saldo += betrag;
     }
-    public void zahleAus(double betrag) {
+    public void zahleAus(double betrag) throws KontoAusnahme {
+        if(betrag<0)
+            throw new KontoAusnahme("Negativer Betrag:"+betrad);
+        if(saldo<betrag)
+            throw new KontoAusnahme("Betrag mehr als Saldo:"+betrag);
         saldo -= betrag;
     }
     public void info() {
