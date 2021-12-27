@@ -1,9 +1,9 @@
 import java.io.IOException;
 
 public class Konto {
-    int kontonummer;
-    double saldo;
-    private double betrad;
+    int kontonummer;//номер счета
+    double saldo;//остаток средств
+
 
     public Konto(){}
     public Konto(int kontonummer) {
@@ -28,19 +28,19 @@ public class Konto {
     }
     public void setSaldo(double betrag)throws KontoAusnahme {
         if(betrag<0)
-            throw new KontoAusnahme("Negativer Saldo:"+betrad);
+            throw new KontoAusnahme("Negativer Saldo:"+betrag);
 
-            saldo = betrag;
+            saldo = betrag;//денежная сумма
     }
     public void zahleEin(double betrag)throws KontoAusnahme {
         if(betrag<0)
-            throw new KontoAusnahme("Negativer Betrag:"+betrad);
+            throw new KontoAusnahme("Negativer Betrag:"+betrag);
 
         saldo += betrag;
     }
     public void zahleAus(double betrag) throws KontoAusnahme {
         if(betrag<0)
-            throw new KontoAusnahme("Negativer Betrag:"+betrad);
+            throw new KontoAusnahme("Negativer Betrag:"+betrag);
         if(saldo<betrag)
             throw new KontoAusnahme("Betrag mehr als Saldo:"+betrag);
         saldo -= betrag;
