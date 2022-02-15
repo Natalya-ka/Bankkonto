@@ -2,9 +2,9 @@ public class Test {
     public static void main(String[]args) throws KontoAusnahme{
 
 
-            Konto kon = new Konto(4711, 100);
-            kon.zahleAus(500);
-            kon.zahleEin(10);
+            Konto kon = new Konto(4711, 10000);
+            kon.zahleAus(1000);
+            kon.zahleEin(104);
             kon.info();
 
 
